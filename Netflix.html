@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2020 by Tanisha-saini (http://jsbin.com/hecitin/82/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+	<title>Netflix India-Watch TV Shows Online and Watch Movies Online</title>
+	<!-- <link href="style.css" rel="stylesheet" type="text/css">
+	<script src="javaa.js"></script> -->
+<style id="jsbin-css">
+/* common styling*/
+body{
+  font-family: 'Arial', sans-serif;
+  color: #999;
+  background-color: black;
+  margin: 0;
+}
+h1{
+  font-size: 50px;
+  color:white;
+  padding:0;
+}
+p{
+  font-size: 20px;
+  color:white;
+  padding: 0;
+}
+hr {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 4px;
+  color: gray;
+}
+/*background*/
+main div{
+   background: url(https://dkr0pu7ej5xex.cloudfront.net/wp-content/uploads/2017/04/24135159/Netflix-Background.jpg);
+   border: 0.3px white;
+   padding : 80px;
+} 
+/* section 1 styling */
+.header{
+	/* display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around; */
+	font-family: 'Arial', sans-serif;
+	font-weight: 800;
+}
+.header p{
+  margin-top:0px;
+	color:red;
+	font-size: 40px;
+    float:left;
+  padding: 0;
+}
+/* sign in button styling */
+ .header input[type=text],input[type=password]{
+  width: 100%;
+   height:200px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color:black;
+  color:white;
+}
+.header button{
+  float:right;
+  background-color: red;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  height: 50px;
+}
+ .header button:hover{
+  opacity:0.8;
+}
+.header .cancelbtn{
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+.header .container {
+  padding: 16px;
+}
+.header .modal{
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+.header .modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+.header .close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.header .close:hover,
+.header .close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* #btn{
+  margin :0px;
+  height:100px;
+    float:right;
+    background-color: red;
+  color:white;
+  height: 30px;
+  width:70px;
+  border:none;
+  border-radius: 5px;
+  outline: none;
+}  */
+
+.section1{
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-weight: 700;
+	
+}
+/* section 1 form styling */
+.section1 .sectioon1 form{
+  float:center;
+  margin-top:15px;
+}
+.section1 .sectioon1 input[type="email"]{
+  padding:4px;
+  height:50px;
+  width:500px;
+}
+.section1 #btn2{
+    height:45px;
+    width:200px;
+	color: white;
+	background-color: red;
+	border:none;
+	border-radius: 5px;
+    cursor:pointer;
+}
+/* section 2 styling */
+.section2{
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	text-align: left;
+	font-weight: 700;
+	margin-left: 0;
+}
+.section2 h1{
+	font-size: 40px;
+	padding: 20px;
+	width:60%;
+}
+.section2 img{
+	width:30%;
+}
+.section2 nav {
+	padding: 60px;
+	margin-right: 200px;
+}
+/* section3 styling */
+.section3{
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	text-align: left;
+	font-weight: 700;
+}
+.section3 img {
+	width:30%;
+}
+.section3 nav{
+	margin-left:100px;
+	padding: 60px;
+}
+/* section 4 styling */
+.section4{
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	text-align: left;
+	font-weight: 700;
+	
+}
+.section4 img {
+	width:30%;
+}
+.section4 nav{
+	margin-right:100px;
+	padding: 60px;
+}
+.section4 nav h1{
+	font-size: 60px;
+}
+/* section 5 styling */
+.section5{
+	position: relative;
+	width: 100%;
+	align-items: center;
+	text-align: center;
+}
+.section5 h1{
+	font-size: 50px;
+}
+/* section 5 collapse question answer */
+.section5   .collapsible {
+  background-color: #777;
+  color: white;
+  padding : 18px;
+  margin-bottom: 2px;
+  width: 70%;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  font-size: 15px;
+}
+ .active,.section5  .collapsible:hover {
+  background-color: #555;
+}
+
+.section5   .content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+/* section 5 form styling */
+.section5 .sectioon5 form{
+  float:center;
+  margin-top:15px;
+}
+.section5 .sectioon5 input[type="email"]{
+  padding:4px;
+  height:50px;
+  width:500px;
+}
+.section5 #btn3{
+    height:45px;
+    width:200px;
+	color: white;
+	background-color: red;
+	border:none;
+	border-radius: 5px;
+    cursor:pointer;
+}
+/* styling for section 6  */
+.section6 #table{
+  width:100%
+  font-size:60px;
+  cursor:pointer;
+  margin-left:auto;
+  margin-right:auto;
+  border-collapse: separate;
+  border-spacing: 150px 20px;
+}
+.section6 p{
+  text-align:left;
+  color:grey;
+}
+/* styling for changed broswer size */
+@media screen and (max-width:400px){
+  .section2,.section3,.section4,.section5 {
+    flex-flow:column;
+    text-align:center;
+    img:center;
+  }
+}
+/* footer styling */
+footer{
+	border: 0.5px solid black;
+	background-color:gray;
+	color:white;
+	font-size: 30px;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<main>
+		<div >
+			<header class="header">
+				<p >NETFLIX</p>
+				<button onclick ="document.getElementById('ID').style.display='block'">
+				  Sign In
+				</button>
+                <div id="ID" class="modal">
+                <form class="modal-content animate" action="/action_page.php" method="post">
+                  <div class="container">
+                    <label for"uname">Username</label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+                    
+                    <label for"psw">Password</label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    
+                    <button type="submit">SignIn</button>
+                    <label>
+                      <input type="checkbox" checked="checked" name="remember">Remember me</label>
+                    
+                  </div>
+                  <div class="container" >
+                    <button type="button" onclick="document.getElementById('ID').style.display(none)" class="cancelbtn">Cancel</button>
+                  </div>
+                </form>
+             </div>
+			</header>
+			<section class="section1"> 
+		        <h1>Unlimited movies,TV shows and more. </h1>
+				<p>Watch anywhere. Cancel Anytime.</p>
+                <p>Ready to watch? Enter your email to create or restart your membership.</p>
+			    <section class="sectioon1">
+                  <form >
+                      <input type="email" id="email" placeholder="Enter email address..">
+                      <button type="submit" id="btn2">
+                          Get Started
+                      </button>
+                  </form>
+                </section>
+			</section>
+		</div>
+		<hr>
+		<section class ="section2">
+			<nav>
+			<h1>Enjoy on your TV.</h1>
+			<p>Watch on smart TVs, PlayStation, Xbox,</p>
+			<p> 
+			Chromecast, Apple TV, Blu-ray players and<p> more.
+			</p>
+			</nav>
+			<img src="https://cnet3.cbsistatic.com/img/IHiBpycMFiiXa9YJbFPhmftVIAU=/940x0/2019/03/06/31ed03b5-5385-4890-968d-75fb5e2c3387/230-how-to-watch-netflix.jpg" alt="tv">
+		</section>
+		<hr>
+		<section class ="section3">
+			<img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" alt="mobile">
+			<nav>
+			<h1>Download your shows </h1><h1>to watch offline.</h1>
+			<p>Save your favourites easily and always have </p><p>something to watch.</p>
+			</nav>
+			
+		</section>
+		<hr>
+		<section class="section4">
+			<nav>
+			<h1>Watch everywhere.</h1>
+			<p>Stream unlimited movies and TV shows on</p>
+			<p> your phone, tablet, laptop, and TV.</p>
+			</nav>
+			<img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png" alt="lap">
+		</section>
+		<hr>
+		<section  class="section5">
+			<nav>
+                <h1>Frequently Asked Questions</h1>
+				<button type="button" class="collapsible">What is netflix?</button>
+				<div class="content">
+				  <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.
+
+				     You can watch as much as you want, whenever you want without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+				</div>
+				<button type ="button" class ="collapsible">How much does netflix cost?</button>
+				<div class="content">
+					<p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹ 199 to ₹ 799 a month. No extra costs, no contracts.</p>
+				</div>
+				<button type="button" class="collapsible">How do i cancel?</button>
+				<div class="content">
+					<p>Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+				</div>
+                <button type ="button" class ="collapsible">Where can i watch?</button>
+				<div class="content">
+					<p>Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
+                        You can also download your favourite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.
+                  </p>
+              </div>
+              <button type="button" class="collapsible">What can i watch on Netflix?</button>
+              <div class="content">
+                <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.
+                </p>
+                
+              </div>
+             </nav>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            <section class="sectioon5">
+			<form >
+				<input type="email" id="email" placeholder="Enter email address..">
+				<button type="submit" id="btn3">
+					Get Started
+				</button>
+			</form>
+            <section>
+			
+		</section>
+		<hr>
+		<section class="section6">
+          <p>Questions? Call 000-800-040-1843
+          <table id="table">
+            <tr>
+              <th>FAQ</th>
+              <th>Help centre</th>
+              <th>Account</th>
+              <th>Media centre</th>
+            </tr>
+            <tr>
+              <td>Investor relations</td>
+              <td>Jobs</td>
+              <td>Ways to watch </td>
+              <td>Terms of use</td>
+            </tr>
+            <tr>
+              <td>Privacy</td>
+              <td>Cookie preferences</td>
+              <td>Corporate information</td>
+              <td>Contact us </td>
+            </tr>
+            <tr>
+              <td>Speed test</td>
+              <td>Legal notices</td>
+              <td>Netflix Originals</td>
+            </tr>
+          </table>
+          <p>Netlix India</p>
+		</section>
+		<footer>
+			Page created by Tanisha saini..
+		</footer>
+	</main>
+<script id="jsbin-javascript">
+// Get the modal
+var modal = document.getElementById('ID');
+console.log(modal);
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+</html>
