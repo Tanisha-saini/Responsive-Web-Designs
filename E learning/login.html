@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            font-family: Calibri, Helvetica, sans-serif;
+            background-color: #f1f1f1;
+        }
+        .login{
+            background-color: yellow;
+            width:100%;
+            color:black;
+            padding:15px;
+            margin:10px 0px;
+            border:none;
+            cursor:pointer;
+            font-weight:1000;
+        }
+        form{
+            border: 3px solid #f1f1f1;
+        }
+        input[type=text],input[type=password]{
+            width:100%;
+            margin:8px 0;
+            padding:12px,20px;
+            display:inline-block;
+            border: 2px solid black;
+            box-sizing:border-box;
+        }
+        .container{
+            padding:25px;
+            background:lightblue;
+        }
+
+        .home{
+            background-color: yellow;
+            float:right;
+            padding:10px 50px 10px 50px;
+            font-size:large;
+        }
+    </style>
+</head>
+<body>
+    <button class="home" onclick="document.location='index.html'">Home</button>
+    <br><br>
+    <center><h1>Login</h1></center>
+    <form>
+        <div class="container">
+            <label>Username : </label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+            <label>Password: </label>
+            <input type="password" placeholder="Enter password" name="password" required>
+            <button class="login" type="submit">Login</button>
+        </div>
+    </form>
+</body>
+</html>
